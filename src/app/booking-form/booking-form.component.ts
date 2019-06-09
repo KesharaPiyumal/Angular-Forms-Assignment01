@@ -21,7 +21,7 @@ export class BookingFormComponent implements OnInit {
      city : '',
      numberOfPeople :0,
      numberOfRooms : 0,
-     arrivalDate : null,
+     date : null,
      numberOfNight : 0,
      occupancy : '',
      addInfo : ''

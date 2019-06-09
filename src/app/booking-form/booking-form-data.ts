@@ -10,7 +10,7 @@ export interface FormData{
   city : string;
   numberOfPeople :number;
   numberOfRooms : number;
-  arrivalDate : Date;
+  date : Date;
   numberOfNight : number;
   occupancy : string;
   addInfo : string;
