@@ -1,0 +1,93 @@
+<div class="container card mt-3" style="width: 45rem;">
+    <div class="card-header">
+        <h4>Booking Form</h4>
+    </div>
+    <div class="card-body">
+        <div class="mb-4">Fields marked with * are required</div>
+        <form (ngSubmit)='onSubmit()'>
+          <div class="row mb-3">
+              <label class="col-md-4">Title*</label>
+              <select class="col-md-4" name="title" [(ngModel)] = 'formData.title' required>
+                <option value="1">Title 1</option>
+                <option value="2">Title 2</option>
+                <option value="3">Title 3</option>
+                <option value="4">Title 4</option>
+              </select>
+          </div>
+              
+          <div class="row mb-3">
+              <label class="col-md-4">Full Name*</label>
+              <input type="text" class="col-md-8" name="fullName" [(ngModel)] = 'formData.fullName' required/>
+          </div>
+             
+          <div class="row mb-3">
+              <label class="col-md-4">Phone Number*</label>
+              <input type="number" class="col-md-8"  name="phoneNumber" [(ngModel)] = 'formData.phoneNumber' required/>
+          </div>
+              
+          <div class="row mb-3">
+              <label class="col-md-4" >Mobile Number</label>
+              <input type="number" class="col-md-8" name="mobileNumber" [(ngModel)] = 'formData.mobileNumber' />
+          </div>
+
+          <div class="row mb-3">
+              <label class="col-md-4">Email*</label>
+              <input type="email" class="col-md-8" name="email" [(ngModel)] = 'formData.email' required/>
+          </div>
+
+          <div class="row mb-3">
+              <label class="col-md-4">Street Address</label>
+              <input type="text" class="col-md-8" name="streetAddress"   [(ngModel)] = 'formData.streetAddress' >
+          </div>
+
+          <div class="row mb-3">
+              <label class="col-md-4">Town</label>
+              <input type="text" class="col-md-8" name="town" [(ngModel)] = 'formData.town'>
+          </div>
+
+          <div class="row mb-3">
+              <label class="col-md-4">City</label>
+              <input type="text" class="col-md-8" name="city" [(ngModel)] = 'formData.city'>
+          </div>
+
+          <div class="row mb-3">
+              <label class="col-md-4">Number of People*</label>
+              <input type="number" class="col-md-8" name="numberOfPeople" [(ngModel)] = 'formData.numberOfPeople'required>
+          </div>
+
+          <div class="row mb-3">
+              <label class="col-md-4">Number of Rooms*</label>
+              <input type="number" class="col-md-8" name="NumberOfRooms" [(ngModel)] = 'formData.NumberOfRooms' required>
+          </div>
+
+          <div class="row mb-3">
+              <label class="col-md-4">Arrival Date/Time*</label>
+              <input type="date" class="col-md-8" name="date" [(ngModel)] = 'formData.date' required>
+          </div>
+
+          <div class="row mb-3">
+              <label class="col-md-4">Number of Nights*</label>
+              <input type="number" class="col-md-8" name="numberOfNights" [(ngModel)] = 'formData.numberOfNights' required>
+          </div>
+
+          <div class="row mb-3">
+              <label class="col-md-4">Occupancy</label>
+              <div class ="col-md-8">
+                  <input type="radio" name="occupancy" value="single"  [(ngModel)] = 'formData.occupancy'> Single <br>
+                  <input type="radio" name="occupancy" value="twin"   [(ngModel)] = 'formData.occupancy'> Twin <br>
+                  <input type="radio" name="occupancy" value="double" [(ngModel)] = 'formData.occupancy'> Double <br>
+              </div>
+          </div>
+
+          <div class="row mb-3">
+              <label class="col-md-4">Additional Info</label>
+              <textarea rows='6' class="col-md-8" name="addInfo" [(ngModel)] = 'formData.addInfo'></textarea>
+          </div>
+
+          <div class="row mb-3 col-md-12">
+              <button class="btn btn-primary" name="submit">Submit Form</button>
+          </div>
+
+        </form>
+    </div>
+</div>
